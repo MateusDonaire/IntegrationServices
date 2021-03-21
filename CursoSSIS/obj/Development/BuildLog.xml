@@ -2,7 +2,7 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>CursoSSIS</Name>
-    <LastWriteTime>2021-03-21T06:22:50.6311481Z</LastWriteTime>
+    <LastWriteTime>2021-03-21T07:48:26.8495386Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
@@ -39,6 +39,41 @@
     <ProjectBuildItemInfo>
       <Name>ClassificarAgregar.dtsx</Name>
       <LastWriteTime>2021-03-21T06:23:14.8750967Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ConversaoDeDados.dtsx</Name>
+      <LastWriteTime>2021-03-21T06:42:16.0076893Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>DivisaoCondicional.dtsx</Name>
+      <LastWriteTime>2021-03-21T06:46:42.2167863Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>AddRemover.dtsx</Name>
+      <LastWriteTime>2021-03-21T07:21:26.539245Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Multcast.dtsx</Name>
+      <LastWriteTime>2021-03-21T07:32:16.1289216Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Pivot.dtsx</Name>
+      <LastWriteTime>2021-03-21T07:38:29.628101Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>UnPivot.dtsx</Name>
+      <LastWriteTime>2021-03-21T07:43:27.1009802Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>ScriptSql.dtsx</Name>
+      <LastWriteTime>2021-03-21T07:52:38.3919882Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>
