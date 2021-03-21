@@ -1,0 +1,686 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="3/21/2021 2:24:11 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="NOTEDONAIRE"
+  DTS:CreatorName="NOTEDONAIRE\Mateus Donaire"
+  DTS:DTSID="{F8E5636C-36F4-4DE4-AB95-BBA01C5F0542}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.94"
+  DTS:LocaleID="1046"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="3"
+  DTS:VersionGUID="{07AD0AEF-04C4-46F1-8A69-A4B69923EE98}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Destino CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{EE536CFC-52E2-4017-9CC2-C057CDC625F3}"
+      DTS:ObjectName="Destino CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x003B_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\SSIS_ETL\Destino\arquivos_csv\DadosGov2014_Out.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Região"
+              DTS:DTSID="{759DCA69-E4E8-4A1C-80A7-CA8868D20F4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UF"
+              DTS:DTSID="{FE306772-5A80-45F0-ADFE-6E05FC9FB1FA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cidade"
+              DTS:DTSID="{C5F86C99-A6CA-4DD2-BA66-D6EE08032046}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sexo"
+              DTS:DTSID="{8CBBBC25-70C6-46A5-893B-4E4E96B22567}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Faixa Etária"
+              DTS:DTSID="{D96DC0AE-96C6-4AD3-897D-98E4064AD737}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ano Abertura"
+              DTS:DTSID="{39650757-8BD0-4FAE-A93E-8A85222A103D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total"
+              DTS:DTSID="{02CB4933-C2D7-4F62-B102-89C359DFE60F}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Origem CSV]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9FD815C9-48A6-4DA2-B7B1-40CEF20018B3}"
+      DTS:ObjectName="Origem CSV">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1046"
+          DTS:HeaderRowDelimiter="_x003B_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="C:\SSIS_ETL\Origem\arquivos_csv\DadosGov2014.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Região"
+              DTS:DTSID="{E4B62C04-206D-42EF-947C-59757383D1C4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UF"
+              DTS:DTSID="{90FBA39E-92A7-45DD-9376-1DEF442CCCAA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Cidade"
+              DTS:DTSID="{3DE6B364-4545-456E-BD01-F2F17DA57F00}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sexo"
+              DTS:DTSID="{1AACF020-FA8F-46EB-985A-DFAC017B0452}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Faixa Etária"
+              DTS:DTSID="{96AE81AC-B9AA-40C4-BE60-5A450B069FEB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ano Abertura"
+              DTS:DTSID="{CDE1E16C-E8C8-4E3D-9656-E1DC22345684}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Total"
+              DTS:DTSID="{42F809B9-B1FA-4A7B-8F2D-73159F9B77B7}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\OrigemDestinoCSV"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarefa Fluxo de Dados"
+      DTS:DTSID="{3943E26A-3F40-40E4-BBDA-264734E42D0B}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="OrigemDestinoCSV"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Destino de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Destino de Arquivo Simples"
+              localeId="1046"
+              name="Destino de Arquivo Simples"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se os dados substituirão o arquivo de destino ou serão anexados a ele."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Especifica o texto a ser gravado no arquivo de destino antes da gravação de quaisquer dados."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="Quando o qualificador de texto está habilitado, ele especifica se o qualificador de texto nos dados gravados no arquivo de destino serão de saída ou não."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Destino CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[Destino CSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples]"
+                  hasSideEffects="true"
+                  name="Entrada de Destino de Arquivo Simples">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[Região]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Região"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Região]"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Região]" />
+                    <inputColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[UF]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="UF"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[UF]"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[UF]" />
+                    <inputColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[Cidade]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Cidade"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Cidade]"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Cidade]" />
+                    <inputColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[Sexo]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sexo"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Sexo]"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Sexo]" />
+                    <inputColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[Faixa Etária]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Faixa Etária"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Faixa Etária]"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Faixa Etária]" />
+                    <inputColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[Ano Abertura]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Ano Abertura"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Ano Abertura]"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Ano Abertura]" />
+                    <inputColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].Columns[Total]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Total"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Total]"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Total]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Região]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Região" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[UF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UF" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Cidade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Cidade" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Faixa Etária]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Faixa Etária" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Ano Abertura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ano Abertura" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples].ExternalColumns[Total]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Origem de Arquivo Simples;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos os Direitos Reservados; http://www.microsoft.com/sql/support;1"
+              description="Origem de Arquivo Simples"
+              localeId="1046"
+              name="Origem de Arquivo Simples"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Especifica se colunas de comprimento zero são tratadas como nulas."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica o nome de uma coluna de saída que contém o nome do arquivo. Se nenhum nome for especificado, nenhuma coluna de saída contendo o nome de arquivo será gerada."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Origem CSV]"
+                  connectionManagerRefId="Package.ConnectionManagers[Origem CSV]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]"
+                  name="Saída de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Região]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Região]"
+                      length="50"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Região]"
+                      name="Região"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[UF]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[UF]"
+                      length="50"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[UF]"
+                      name="UF"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Cidade]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Cidade]"
+                      length="50"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Cidade]"
+                      name="Cidade"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Sexo]"
+                      length="50"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Sexo]"
+                      name="Sexo"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Faixa Etária]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Faixa Etária]"
+                      length="50"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Faixa Etária]"
+                      name="Faixa Etária"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Ano Abertura]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Ano Abertura]"
+                      length="50"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Ano Abertura]"
+                      name="Ano Abertura"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Total]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversão"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Total]"
+                      length="50"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].Columns[Total]"
+                      name="Total"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se a coluna usa as rotinas de análise de localidade neutro mais rápidas."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indica se os dados estão em formato binário."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Região]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Região" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[UF]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="UF" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Cidade]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Cidade" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Sexo]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sexo" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Faixa Etária]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Faixa Etária" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Ano Abertura]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Ano Abertura" />
+                    <externalMetadataColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples].ExternalColumns[Total]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Total" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples]"
+                  isErrorOut="true"
+                  name="Saída de Erro de Origem de Arquivo Simples">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Coluna de Saída de Erro de Origem de Arquivo Simples"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[Coluna de Saída de Erro de Origem de Arquivo Simples]"
+                      name="Coluna de Saída de Erro de Origem de Arquivo Simples" />
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Erro de Origem de Arquivo Simples].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\OrigemDestinoCSV.Paths[Saída de Origem de Arquivo Simples]"
+              endId="Package\OrigemDestinoCSV\Destino de Arquivo Simples.Inputs[Entrada de Destino de Arquivo Simples]"
+              name="Saída de Origem de Arquivo Simples"
+              startId="Package\OrigemDestinoCSV\Origem de Arquivo Simples.Outputs[Saída de Origem de Arquivo Simples]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--Esta seção CDATA contém as informações de layout do pacote. A seção inclui informações como coordenadas (x,y), largura e altura.-->
+<!--Se você editar manualmente esta seção e cometer algum erro, poderá excluí-la. -->
+<!--O pacote ainda poderá ser carregado normalmente, mas as informações de layout anteriores serão perdidas e o designer reorganizará automaticamente os elementos na superfície de design.-->
+<Objects
+  Version="8">
+  <!--Cada nó abaixo conterá propriedades que não afetam o comportamento em tempo de execução.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="175,42"
+          Id="Package\OrigemDestinoCSV"
+          TopLeft="293,261" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\OrigemDestinoCSV">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="213,42"
+          Id="Package\OrigemDestinoCSV\Origem de Arquivo Simples"
+          TopLeft="333,262" />
+        <NodeLayout
+          Size="214,42"
+          Id="Package\OrigemDestinoCSV\Destino de Arquivo Simples"
+          TopLeft="456,377" />
+        <EdgeLayout
+          Id="Package\OrigemDestinoCSV.Paths[Saída de Origem de Arquivo Simples]"
+          TopLeft="439.5,304">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123.5,73"
+              Start="0,0"
+              End="123.5,65.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,32.5"
+                    Point2="0,36.5"
+                    Point3="4,36.5" />
+                  <mssgle:LineSegment
+                    End="119.5,36.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="119.5,36.5"
+                    Point2="123.5,36.5"
+                    Point3="123.5,40.5" />
+                  <mssgle:LineSegment
+                    End="123.5,65.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
